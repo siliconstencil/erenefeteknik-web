@@ -4,27 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- TEK TİP SEO -->
+  <!-- SEO -->
   <title>Eren Efe Teknik | Ümraniye Beyaz Eşya Teknik Servisi</title>
   <meta name="description" content="Ümraniye ve İstanbul Anadolu Yakası'nda 7/24 Beyaz Eşya, Klima ve Kombi Teknik Servisi. Hızlı servis, garantili onarım.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.erenefeteknik.com/" />
-
-  <!-- OPEN GRAPH (Tekil) -->
+  
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="tr_TR" />
   <meta property="og:title" content="Eren Efe Teknik | Ümraniye Beyaz Eşya Servisi" />
   <meta property="og:description" content="Ümraniye ve çevresinde 7/24 teknik destek. Aynı gün servis, garantili onarım." />
   <meta property="og:url" content="https://www.erenefeteknik.com/" />
-  <meta property="og:image" content="https://www.erenefeteknik.com/assets/logo.png" />
 
-  <!-- SCHEMA (URL DÜZELTİLDİ) -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    "@type": "LocalBusiness",
     "name": "Eren Efe Teknik Servis",
-    "url": "https://www.erenefeteknik.com", 
+    "url": "https://www.erenefeteknik.com",
     "telephone": "+905324848374",
     "email": "gokhan@erenefeteknik.com",
     "address": {
@@ -35,32 +34,73 @@
       "postalCode": "34760",
       "addressCountry": "TR"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 41.0167,
-      "longitude": 29.1167
-    },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       "opens": "00:00",
       "closes": "23:59"
     },
-    "areaServed": ["Ümraniye", "Atakent", "Çakmak", "Ihlamurkuyu", "Site Mahallesi", "Atatürk Mahallesi", "Kadıköy", "Üsküdar", "Ataşehir", "Maltepe", "Kartal", "Pendik"],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Teknik Servis Hizmetleri",
-      "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Buzdolabı Tamiri"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Çamaşır Makinesi Tamiri"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bulaşık Makinesi Tamiri"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Klima Servisi"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kombi Servisi"}}
-      ]
-    }
+    "areaServed": ["Ümraniye", "Kadıköy", "Üsküdar", "Ataşehir", "Maltepe", "Kartal", "Pendik"],
+    "serviceType": ["Refrigerator Repair", "Washing Machine Repair", "Dishwasher Repair", "AC Service", "Boiler Service"]
   }
   </script>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config Override -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e3a5f',
+            pdark: '#0d2137',
+            accent: '#ff6b35',
+            adark: '#e55a2b',
+            surface: '#f5f7fa'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <style>
+    @keyframes pulse-ring {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+      50% { box-shadow: 0 0 0 10px rgba(255, 107, 53, 0); }
+    }
+
+    .wa-pulse, .tel-pulse {
+      animation: pulse-ring 2s infinite;
+    }
+
+    .marquee-track {
+      animation: scroll 30s linear infinite;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    input:invalid, select:invalid, textarea:invalid {
+      border-color: #ef4444;
+    }
+
+    input:valid:not(:placeholder-shown), 
+    select:valid:not(:placeholder-shown), 
+    textarea:valid:not(:placeholder-shown) {
+      border-color: #10b981;
+    }
+  </style>
 </head>
+  
 <body class="font-sans text-gray-800 bg-white antialiased">
 
 <!-- ════════════════════════════════════════════════════════════════
