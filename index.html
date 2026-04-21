@@ -736,7 +736,7 @@
       </p>
     </div>
 
-    <form action="https://formspree.io/f/xqewyapw" method="POST" novalidate
+    <form id="strictContactForm" action="https://formspree.io/f/xqewyapw" method="POST"
           class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 space-y-5">
 
       <div class="grid sm:grid-cols-2 gap-5">
@@ -744,26 +744,21 @@
           <label for="name" class="block text-sm font-semibold text-gray-700 mb-1.5">
             Ad Soyad <span class="text-red-500">*</span>
           </label>
-          <input type="text" id="name" name="name" required autocomplete="name"
-                 pattern="^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]{3,50}$"
-                 title="Lütfen sadece harf kullanın (Örn: Ahmet Yılmaz)"
-                 placeholder="Ahmet Yılmaz"
+          <input type="text" id="name" name="name" autocomplete="name" required
+                 placeholder="Örn: Ahmet Yılmaz"
                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm
                         focus:outline-none focus:ring-2 focus:ring-primary/40
-                        focus:border-primary transition invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500" />
+                        focus:border-primary transition" />
         </div>
         <div>
           <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1.5">
             Telefon <span class="text-red-500">*</span>
           </label>
-          <input type="tel" id="phone" name="phone" required autocomplete="tel"
-                 pattern="^05[0-9]{9}$"
-                 maxlength="11"
-                 title="Lütfen 05XX XXX XX XX formatında 11 haneli numara girin."
-                 placeholder="05324848374"
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required
+                 placeholder="05XX XXX XX XX"
                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm
                         focus:outline-none focus:ring-2 focus:ring-primary/40
-                        focus:border-primary transition invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500" />
+                        focus:border-primary transition" />
         </div>
       </div>
 
@@ -774,7 +769,7 @@
         <select id="service" name="service" required
                 class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm
                        bg-white focus:outline-none focus:ring-2 focus:ring-primary/40
-                       focus:border-primary transition text-gray-700 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500">
+                       focus:border-primary transition text-gray-700">
           <option value="" disabled selected>Seçiniz...</option>
           <option value="buzdolabi">Buzdolabı Tamiri</option>
           <option value="camasir">Çamaşır Makinesi Tamiri</option>
@@ -787,16 +782,19 @@
 
       <div>
         <label for="message" class="block text-sm font-semibold text-gray-700 mb-1.5">
-          Arıza Açıklaması
+          Arıza Açıklaması <span class="text-red-500">*</span>
         </label>
-        <textarea id="message" name="message" rows="3" minlength="10" required
+        <textarea id="message" name="message" rows="3" required
                   placeholder="Cihazınızın markası, modeli ve arıza belirtisi..."
                   class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm
                          focus:outline-none focus:ring-2 focus:ring-primary/40
-                         focus:border-primary transition resize-none invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500"></textarea>
+                         focus:border-primary transition resize-none"></textarea>
       </div>
 
-      <button type="submit"
+      <div id="formAlert" class="hidden text-sm font-bold text-red-600 bg-red-50 p-3 rounded-lg border border-red-200">
+      </div>
+
+      <button type="submit" id="submitBtn"
               class="w-full bg-primary hover:bg-pdark text-white font-bold py-4
                      rounded-xl text-base transition-colors duration-150
                      flex items-center justify-center gap-2">
@@ -810,6 +808,65 @@
     </form>
   </div>
 </section>
+
+<script>
+  document.getElementById('strictContactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const alertBox = document.getElementById('formAlert');
+    const submitBtn = document.getElementById('submitBtn');
+
+    // 1. Soft Rate Limiting (Tarayıcı Belleği Kontrolü)
+    const MAX_SUBMISSIONS = 3;
+    let submissions = parseInt(localStorage.getItem('formSubmissionsCount')) || 0;
+    
+    if (submissions >= MAX_SUBMISSIONS) {
+      alertBox.innerText = "Sistem Koruması: Çok fazla form gönderimi yaptınız. Lütfen daha sonra tekrar deneyin veya bizi doğrudan arayın.";
+      alertBox.classList.remove('hidden');
+      return false;
+    }
+
+    // 2. Veri Çekimi ve Sanitizasyon
+    const nameVal = document.getElementById('name').value.trim();
+    // Telefon numarasındaki tüm boşlukları kaldır (11 hane kontrolü için)
+    const phoneVal = document.getElementById('phone').value.trim().replace(/\s+/g, ''); 
+    const serviceVal = document.getElementById('service').value;
+    const messageVal = document.getElementById('message').value.trim();
+
+    // 3. Strict Regex Kuralları
+    const nameRegex = /^[a-zA-ZğüşıöçĞÜŞİÖÇ\s]{2,50}$/; 
+    const phoneRegex = /^05[0-9]{9}$/; 
+
+    // 4. Doğrulama Motoru (Validation Engine)
+    let errorMessage = "";
+
+    if (!nameRegex.test(nameVal)) {
+      errorMessage = "Hata: Ad Soyad sadece Türkçe/İngilizce harflerden oluşmalı ve en az 2 karakter olmalıdır.";
+    } 
+    else if (!phoneRegex.test(phoneVal)) {
+      errorMessage = "Hata: Geçersiz telefon. Lütfen 05XX XXX XX XX formatında geçerli bir numara girin.";
+    }
+    else if (serviceVal === "") {
+      errorMessage = "Hata: Lütfen bir hizmet türü seçiniz.";
+    }
+    else if (messageVal.length < 10) {
+      errorMessage = "Hata: Arıza açıklaması en az 10 karakter olmalıdır.";
+    }
+
+    // 5. Yürütme (Execution)
+    if (errorMessage !== "") {
+      alertBox.innerText = errorMessage;
+      alertBox.classList.remove('hidden');
+      return false; 
+    } else {
+      localStorage.setItem('formSubmissionsCount', submissions + 1);
+      alertBox.classList.add('hidden');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = "Gönderiliyor...";
+      this.submit(); 
+    }
+  });
+</script>
 
 <!-- ════════════════════════════════════════════════════════════════
      8. FOOTER
