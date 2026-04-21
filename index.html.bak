@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ SEO CORE ═══ -->
+  <title>Eren Efe Teknik | Ümraniye Beyaz Eşya Teknik Servisi</title>
+  <meta name="description"
+        content="Ümraniye'de buzdolabı, çamaşır makinesi, klima ve kombi tamiri. Aynı gün servis, 1 yıl işçilik garantisi, orijinal yedek parça. 7/24 arayın." />
+  <meta name="keywords"
+        content="Ümraniye beyaz eşya servisi, Ümraniye klima tamiri, Ümraniye kombi servisi,
+                 çamaşır makinesi tamiri Ümraniye, buzdolabı servisi İstanbul, Atakent teknik servis,
+                 Çakmak beyaz eşya, Ihlamurkuyu servis" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.erenefeteknik.com/" />
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:locale"      content="tr_TR" />
+  <meta property="og:title"       content="Eren Efe Teknik | Ümraniye Beyaz Eşya Servisi" />
+  <meta property="og:description" content="Aynı gün servis, garantili onarım. Ümraniye ve çevresinde 7/24 teknik destek." />
+  <meta property="og:url"         content="https://www.erenefeteknik.com/" />
+
+  <!-- ═══ SCHEMA.ORG — LocalBusiness ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Eren Efe Teknik Servis",
+    "description": "Ümraniye ve İstanbul Anadolu Yakası'nda beyaz eşya, klima ve kombi teknik servisi.",
+    "url": "https://www.erenefeteknik.com.tr",
+    "telephone": "+90-532-484-83-74",
+    "email": "gokhan@erenefeteknik.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ümraniye",
+      "addressRegion": "İstanbul",
+      "postalCode": "34760",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.0167,
+      "longitude": 29.1167
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "areaServed": [
+      "Ümraniye","Atakent","Çakmak","Ihlamurkuyu","Site Mahallesi",
+      "Atatürk Mahallesi","Kadıköy","Üsküdar","Ataşehir","Maltepe","Kartal","Pendik"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Teknik Servis Hizmetleri",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Buzdolabı Tamiri"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Çamaşır Makinesi Tamiri"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bulaşık Makinesi Tamiri"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Klima Servisi"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kombi Servisi"}}
+      ]
+    }
+  }
+  </script>
+
+  <!-- ═══ TAILWIND CDN ═══ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary:  '#1B4F72',  /* Deep Kurumsal Mavi  */
+            accent:   '#E67E22',  /* Enerji Turuncusu    */
+            pdark:    '#154060',  /* primary hover       */
+            adark:    '#CA6F1E',  /* accent hover        */
+            surface:  '#F4F6F8',
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+        }
+      }
+    }
+  </script>
+
+  <!-- ═══ GOOGLE FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* CTA pulse — telefon & WhatsApp butonları */
+    @keyframes wa-pulse {
+      0%   { box-shadow: 0 0 0 0   rgba(37,211,102,.55); }
+      70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0);  }
+      100% { box-shadow: 0 0 0 0   rgba(37,211,102,0);   }
+    }
+    .wa-pulse { animation: wa-pulse 2.2s infinite; }
+
+    @keyframes tel-pulse {
+      0%   { box-shadow: 0 0 0 0   rgba(230,126,34,.6); }
+      70%  { box-shadow: 0 0 0 14px rgba(230,126,34,0); }
+      100% { box-shadow: 0 0 0 0   rgba(230,126,34,0);  }
+    }
+    .tel-pulse { animation: tel-pulse 2.2s infinite; }
+
+    /* Marka bandı kayan animasyon */
+    @keyframes marquee {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-track { animation: marquee 22s linear infinite; }
+    .marquee-track:hover { animation-play-state: paused; }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-white antialiased">
+
+<!-- ════════════════════════════════════════════════════════════════
+     1. HEADER / NAVBAR
+════════════════════════════════════════════════════════════════ -->
+<header class="sticky top-0 z-50 bg-primary shadow-xl">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="#hero" aria-label="Eren Efe Teknik Ana Sayfa"
+       class="flex items-center gap-2.5">
+      <!-- Wrench SVG -->
+      <svg class="w-8 h-8 text-accent flex-shrink-0" viewBox="0 0 24 24"
+           fill="none" stroke="currentColor" stroke-width="2.2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77
+                 a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91
+                 a6 6 0 017.94-7.94l-3.76 3.76z"/>
+      </svg>
+      <span class="text-white font-extrabold text-xl tracking-tight">
+        Eren Efe <span class="text-accent">Teknik</span>
+      </span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-blue-200">
+      <a href="#hizmetler"  class="hover:text-accent transition-colors duration-150">Hizmetler</a>
+      <a href="#markalar"   class="hover:text-accent transition-colors duration-150">Markalar</a>
+      <a href="#neden-biz"  class="hover:text-accent transition-colors duration-150">Neden Biz?</a>
+      <a href="#bolgeler"   class="hover:text-accent transition-colors duration-150">Bölgeler</a>
+      <a href="#iletisim"   class="hover:text-accent transition-colors duration-150">İletişim</a>
+    </nav>
+
+    <!-- Header CTA: Tıkla-Ara -->
+    <a href="tel:+905324848374"
+       class="tel-pulse bg-accent hover:bg-adark text-white font-bold
+              text-sm px-5 py-2.5 rounded-xl flex items-center gap-2
+              transition-colors duration-150">
+      <!-- Phone icon -->
+      <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54
+                 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0
+                 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1
+                 1h-2C7.82 18 2 12.18 2 5V3z"/>
+      </svg>
+      <span class="hidden sm:inline">0(532) 484 83 74</span>
+      <span class="sm:hidden">Ara</span>
+    </a>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     2. HERO
+════════════════════════════════════════════════════════════════ -->
+<section id="hero"
+         class="relative bg-gradient-to-br from-primary via-[#1a4a6b] to-[#0e3050]
+                text-white overflow-hidden min-h-[88vh] flex items-center">
+
+  <!-- Dekoratif blob'lar -->
+  <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full
+              bg-accent opacity-[0.08] pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute bottom-0 -left-16 w-72 h-72 rounded-full
+              bg-blue-400 opacity-[0.07] pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 py-20
+              grid md:grid-cols-2 gap-14 items-center">
+
+    <!-- ── Sol: Metin ── -->
+    <div>
+      <!-- Trust badge -->
+      <div class="inline-flex items-center gap-2 bg-accent/20 border border-accent/40
+                  text-accent text-xs font-semibold px-3 py-1.5 rounded-full mb-5">
+        <span class="w-2 h-2 bg-accent rounded-full inline-block"></span>
+        7/24 Aktif Servis · Ümraniye'nin Tercihi
+      </div>
+
+      <!-- H1 — SEO primary keyword -->
+      <h1 class="text-4xl sm:text-5xl font-black leading-[1.15] mb-4">
+        Ümraniye Beyaz Eşya<br />
+        <span class="text-accent">Teknik Servisi</span>
+      </h1>
+
+      <!-- H2-equivalent subheading -->
+      <p class="text-2xl font-bold text-blue-200 mb-3">Aynı Gün Kapınızdayız</p>
+
+      <p class="text-blue-300 text-base leading-relaxed mb-8 max-w-lg">
+        Buzdolabı, çamaşır makinesi, bulaşık makinesi, klima ve kombi arızalarınızda
+        <strong class="text-white">orijinal yedek parça</strong> ile
+        <strong class="text-white">1 yıl işçilik garantisi</strong> sunuyoruz.
+      </p>
+
+      <!-- CTA Butonları -->
+      <div class="flex flex-col sm:flex-row gap-3 mb-8">
+
+        <!-- WhatsApp CTA — primary conversion -->
+        <a href="https://wa.me/905324848374?text=Merhaba%2C%20teknik%20servis%20talep%20etmek%20istiyorum."
+           target="_blank" rel="noopener noreferrer"
+           class="wa-pulse bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold
+                  px-7 py-4 rounded-xl flex items-center justify-center gap-2.5
+                  text-base transition-colors duration-150">
+          <!-- WhatsApp SVG -->
+          <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15
+                     -.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463
+                     -2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606
+                     .134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371
+                     -.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51
+                     -.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04
+                     1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096
+                     3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195
+                     1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289
+                     .173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L.057 23.5
+                     l5.79-1.452A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627
+                     0 12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.214-3.732.935
+                     .999-3.61-.234-.371A9.818 9.818 0 1112 21.818z"/>
+          </svg>
+          WhatsApp'tan Yaz
+        </a>
+
+        <!-- Tel CTA — secondary -->
+        <a href="tel:+905324848374"
+           class="tel-pulse bg-accent hover:bg-adark text-white font-bold
+                  px-7 py-4 rounded-xl flex items-center justify-center gap-2.5
+                  text-base transition-colors duration-150">
+          <svg class="w-5 h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54
+                     1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0
+                     011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1
+                     1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          Hemen Ara
+        </a>
+      </div>
+
+      <!-- Micro trust signals -->
+      <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-blue-300">
+        <li class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0
+                 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0
+                 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Aynı Gün Servis
+        </li>
+        <li class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0
+                 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0
+                 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          Orijinal Yedek Parça
+        </li>
+        <li class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0
+                 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0
+                 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          1 Yıl İşçilik Garantisi
+        </li>
+        <li class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-accent flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0
+                 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0
+                 011.414 0z" clip-rule="evenodd"/>
+          </svg>
+          7/24 Destek
+        </li>
+      </ul>
+    </div>
+
+    <!-- ── Sağ: KPI Kartları ── -->
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15
+                  rounded-2xl p-6 text-center">
+        <div class="text-4xl font-black text-accent">25+</div>
+        <div class="text-blue-300 text-sm mt-1 font-medium">Yıllık Tecrübe</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15
+                  rounded-2xl p-6 text-center">
+        <div class="text-4xl font-black text-accent">10K+</div>
+        <div class="text-blue-300 text-sm mt-1 font-medium">Tamamlanan Servis</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15
+                  rounded-2xl p-6 text-center">
+        <div class="text-4xl font-black text-accent">%98</div>
+        <div class="text-blue-300 text-sm mt-1 font-medium">Müşteri Memnuniyeti</div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15
+                  rounded-2xl p-6 text-center">
+        <div class="text-4xl font-black text-accent">&lt;4s</div>
+        <div class="text-blue-300 text-sm mt-1 font-medium">Ort. Müdahale Süresi</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     3. HİZMETLER
+════════════════════════════════════════════════════════════════ -->
+<section id="hizmetler" class="py-20 bg-surface">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="text-center mb-12">
+      <span class="text-accent text-sm font-bold uppercase tracking-widest">Uzmanlık Alanlarımız</span>
+      <h2 class="text-3xl font-black text-primary mt-2">Hizmetlerimiz</h2>
+      <p class="text-gray-500 mt-2 max-w-xl mx-auto text-sm">
+        Tüm marka ve modellerde fabrika standartlarında onarım.
+      </p>
+    </div>
+
+    <!-- Hizmet Kartları -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+
+      <!-- Kart: Buzdolabı -->
+      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100
+                      p-6 text-center group transition-shadow duration-200">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center
+                    mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-200">
+          <!-- Fridge SVG -->
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor"
+               stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="5" y="2" width="14" height="20" rx="2"/>
+            <line x1="5" y1="10" x2="19" y2="10"/>
+            <line x1="9" y1="6" x2="9" y2="8"/>
+            <line x1="9" y1="14" x2="9" y2="18"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-primary text-base mb-1">Buzdolabı</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Soğutma, kompresör, termostat arızaları</p>
+      </article>
+
+      <!-- Kart: Çamaşır Makinesi -->
+      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100
+                      p-6 text-center group transition-shadow duration-200">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center
+                    mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-200">
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor"
+               stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <circle cx="12" cy="13" r="4"/>
+            <line x1="7" y1="7" x2="7.01" y2="7"/>
+            <line x1="11" y1="7" x2="13" y2="7"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-primary text-base mb-1">Çamaşır Makinesi</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Motor, pompa, kapı kilidi onarımı</p>
+      </article>
+
+      <!-- Kart: Bulaşık Makinesi -->
+      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100
+                      p-6 text-center group transition-shadow duration-200">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center
+                    mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-200">
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor"
+               stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M9 9h6M9 12h6M9 15h4"/>
+            <circle cx="17" cy="8" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-primary text-base mb-1">Bulaşık Makinesi</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Su almama, yıkamama, ısıtma sorunları</p>
+      </article>
+
+      <!-- Kart: Klima -->
+      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100
+                      p-6 text-center group transition-shadow duration-200">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center
+                    mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-200">
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor"
+               stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 2v20M16 2v20M2 8h20M2 16h20"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-primary text-base mb-1">Klima</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Gaz dolumu, temizlik, kompresör tamiri</p>
+      </article>
+
+      <!-- Kart: Kombi / Küçük Ev Aletleri -->
+      <article class="bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-100
+                      p-6 text-center group transition-shadow duration-200">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center
+                    mx-auto mb-4 group-hover:bg-primary/20 transition-colors duration-200">
+          <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor"
+               stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/>
+            <circle cx="12" cy="9" r="2.5"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-primary text-base mb-1">Kombi & Şofben</h3>
+        <p class="text-gray-500 text-xs leading-relaxed">Yakma, basınç, devre kartı sorunları</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     4. MARKA BANDI (Marquee)
+════════════════════════════════════════════════════════════════ -->
+<section id="markalar" class="py-12 bg-white border-y border-gray-100 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 mb-6 text-center">
+    <span class="text-accent text-sm font-bold uppercase tracking-widest">Tamir ve Bakım Yaptığımız</span>
+    <h2 class="text-2xl font-black text-primary mt-1">Markalar</h2>
+  </div>
+
+  <!-- Kayan bant — çift kopya = seamless loop -->
+  <div class="relative overflow-hidden">
+    <div class="flex gap-0 marquee-track w-max">
+      <!-- Kopya 1 -->
+      <div class="flex items-center gap-10 px-5">
+        <span class="text-primary font-black text-xl whitespace-nowrap">ARÇELİK</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">BEKO</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">BOSCH</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">SİEMENS</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">VESTEL</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">SAMSUNG</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">LG</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">BAYMAK</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">DEMİRDÖKÜM</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">VAILLANT</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">MIELE</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">GRUNDIG</span>
+        <span class="text-gray-300 text-2xl">·</span>
+      </div>
+      <!-- Kopya 2 — seamless için özdeş -->
+      <div class="flex items-center gap-10 px-5">
+        <span class="text-primary font-black text-xl whitespace-nowrap">ARÇELİK</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">BEKO</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">BOSCH</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">SİEMENS</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">VESTEL</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">SAMSUNG</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">LG</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">BAYMAK</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">DEMİRDÖKÜM</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">VAILLANT</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">MIELE</span>
+        <span class="text-gray-300 text-2xl">·</span>
+        <span class="text-primary font-black text-xl whitespace-nowrap">GRUNDIG</span>
+        <span class="text-gray-300 text-2xl">·</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     5. NEDEN BİZ
+════════════════════════════════════════════════════════════════ -->
+<section id="neden-biz" class="py-20 bg-primary text-white">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="text-center mb-12">
+      <span class="text-accent text-sm font-bold uppercase tracking-widest">Fark Yaratan Nedenler</span>
+      <h2 class="text-3xl font-black mt-2">Neden Eren Efe Teknik?</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Madde 1 -->
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15
+                  rounded-2xl p-8 hover:bg-white/15 transition-colors duration-200">
+        <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+               stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944
+                     a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0
+                     5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03
+                     9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Orijinal Yedek Parça</h3>
+        <p class="text-blue-200 text-sm leading-relaxed">
+          Yalnızca orijinal ve sertifikalı parça kullanıyoruz.
+          Muadil parça kullanımından kaynaklanan ikincil arızalar sıfır.
+        </p>
+      </div>
+
+      <!-- Madde 2 -->
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15
+                  rounded-2xl p-8 hover:bg-white/15 transition-colors duration-200">
+        <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+               stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">1 Yıl İşçilik Garantisi</h3>
+        <p class="text-blue-200 text-sm leading-relaxed">
+          Tüm onarımlarımız 1 yıl işçilik garantisi kapsamındadır.
+          Garanti süresi içinde aynı arıza → ücretsiz müdahale.
+        </p>
+      </div>
+
+      <!-- Madde 3 -->
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15
+                  rounded-2xl p-8 hover:bg-white/15 transition-colors duration-200">
+        <div class="w-12 h-12 bg-accent rounded-xl flex items-center justify-center mb-5">
+          <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+               stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10
+                     0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3
+                     0 015.356-1.857M7 20v-2c0-.656.126-1.283.356
+                     -1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0
+                     11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold mb-2">Uzman Teknik Kadro</h3>
+        <p class="text-blue-200 text-sm leading-relaxed">
+          Sertifikalı, deneyimli teknisyenler. Her marka ve modelde
+          fabrika eğitimi almış ekip ile hizmetinizdeyiz.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     6. HİZMET BÖLGELERİ — Yerel SEO Kritik
+════════════════════════════════════════════════════════════════ -->
+<section id="bolgeler" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="text-center mb-10">
+      <span class="text-accent text-sm font-bold uppercase tracking-widest">Servis Kapsamı</span>
+      <h2 class="text-3xl font-black text-primary mt-2">
+        Ümraniye ve Çevresinde Hizmetinizdeyiz
+      </h2>
+      <p class="text-gray-500 text-sm mt-2 max-w-lg mx-auto">
+        Ümraniye'nin tüm mahallelerine ve İstanbul Anadolu Yakası'na aynı gün servis.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+
+      <!-- Mahalle Listesi — SEO keyword cluster -->
+      <div>
+        <h3 class="text-primary font-bold text-lg mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95
+                 a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+          Ümraniye Mahalleleri
+        </h3>
+        <ul class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+          <!-- SEO: her mahalle adı bir long-tail keyword -->
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Atakent
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Çakmak
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Ihlamurkuyu
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Site Mahallesi
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Atatürk Mahallesi
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Yukarı Dudullu
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Aşağı Dudullu
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Elmalıkent
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Namık Kemal
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Hekimbaşı
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Mustafa Kemal Paşa
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0"></span>
+            Altınşehir
+          </li>
+        </ul>
+      </div>
+
+      <!-- Çevre İlçeler -->
+      <div>
+        <h3 class="text-primary font-bold text-lg mb-4 flex items-center gap-2">
+          <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016
+                     0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5
+                     5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+          </svg>
+          Çevre İlçeler
+        </h3>
+        <ul class="grid grid-cols-2 gap-2 text-sm text-gray-600">
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
+            Kadıköy
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
+            Üsküdar
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
+            Ataşehir
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
+            Maltepe
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
+            Kartal
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
+            Pendik
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
+            Beykoz
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></span>
+            Çekmeköy
+          </li>
+        </ul>
+
+        <!-- CTA kutusu -->
+        <div class="mt-6 bg-surface border border-gray-200 rounded-xl p-5">
+          <p class="text-sm text-gray-600 mb-3">
+            Bölgenizde servis için hemen iletişime geçin:
+          </p>
+          <a href="tel:+905324848374"
+             class="tel-pulse bg-accent hover:bg-adark text-white font-bold text-sm
+                    px-5 py-3 rounded-lg flex items-center gap-2 w-fit
+                    transition-colors duration-150">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0
+                       01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774
+                       -1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1
+                       1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            0(532) 484 83 74
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     7. İLETİŞİM FORMU
+════════════════════════════════════════════════════════════════ -->
+<section id="iletisim" class="py-20 bg-surface">
+  <div class="max-w-3xl mx-auto px-4">
+
+    <div class="text-center mb-10">
+      <span class="text-accent text-sm font-bold uppercase tracking-widest">7/24 Ulaşın</span>
+      <h2 class="text-3xl font-black text-primary mt-2">Servis Talebi Oluşturun</h2>
+      <p class="text-gray-500 text-sm mt-2">
+        Formu doldurun, en kısa sürede sizi arayalım.
+      </p>
+    </div>
+
+    <form action="#" method="POST" novalidate
+          class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 space-y-5">
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="name" class="block text-sm font-semibold text-gray-700 mb-1.5">
+            Ad Soyad <span class="text-red-500">*</span>
+          </label>
+          <input type="text" id="name" name="name" required autocomplete="name"
+                 placeholder="Ahmet Yılmaz"
+                 class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm
+                        focus:outline-none focus:ring-2 focus:ring-primary/40
+                        focus:border-primary transition" />
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-semibold text-gray-700 mb-1.5">
+            Telefon <span class="text-red-500">*</span>
+          </label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel"
+                 placeholder="0(5XX) XXX XX XX"
+                 class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm
+                        focus:outline-none focus:ring-2 focus:ring-primary/40
+                        focus:border-primary transition" />
+        </div>
+      </div>
+
+      <div>
+        <label for="service" class="block text-sm font-semibold text-gray-700 mb-1.5">
+          Hizmet Türü <span class="text-red-500">*</span>
+        </label>
+        <select id="service" name="service" required
+                class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm
+                       bg-white focus:outline-none focus:ring-2 focus:ring-primary/40
+                       focus:border-primary transition text-gray-700">
+          <option value="" disabled selected>Seçiniz...</option>
+          <option value="buzdolabi">Buzdolabı Tamiri</option>
+          <option value="camasir">Çamaşır Makinesi Tamiri</option>
+          <option value="bulasik">Bulaşık Makinesi Tamiri</option>
+          <option value="klima">Klima Servisi</option>
+          <option value="kombi">Kombi / Şofben Servisi</option>
+          <option value="diger">Diğer</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-semibold text-gray-700 mb-1.5">
+          Arıza Açıklaması
+        </label>
+        <textarea id="message" name="message" rows="3"
+                  placeholder="Cihazınızın markası, modeli ve arıza belirtisi..."
+                  class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm
+                         focus:outline-none focus:ring-2 focus:ring-primary/40
+                         focus:border-primary transition resize-none"></textarea>
+      </div>
+
+      <button type="submit"
+              class="w-full bg-primary hover:bg-pdark text-white font-bold py-4
+                     rounded-xl text-base transition-colors duration-150
+                     flex items-center justify-center gap-2">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5"
+             viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+        </svg>
+        Servis Talebi Gönder
+      </button>
+    </form>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     8. FOOTER
+════════════════════════════════════════════════════════════════ -->
+<footer class="bg-brand-dark bg-[#0d2137] text-gray-400 pt-14 pb-8">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <div class="grid md:grid-cols-3 gap-10 mb-10">
+
+      <!-- Sütun 1: Marka -->
+      <div>
+        <div class="flex items-center gap-2.5 mb-4">
+          <svg class="w-7 h-7 text-accent flex-shrink-0" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2.2"
+               stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77
+                     a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91
+                     -6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+          </svg>
+          <span class="text-white font-extrabold text-lg">
+            Eren Efe <span class="text-accent">Teknik</span>
+          </span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-400">
+          Ümraniye ve İstanbul Anadolu Yakası'nda güvenilir, hızlı ve
+          garantili beyaz eşya teknik servisi. 7/24 hizmetinizdeyiz.
+        </p>
+      </div>
+
+      <!-- Sütun 2: Hızlı Bağlantılar -->
+      <div>
+        <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-4">
+          Hızlı Menü
+        </h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#hizmetler" class="hover:text-accent transition-colors">Hizmetler</a></li>
+          <li><a href="#markalar"  class="hover:text-accent transition-colors">Markalar</a></li>
+          <li><a href="#neden-biz" class="hover:text-accent transition-colors">Neden Biz?</a></li>
+          <li><a href="#bolgeler"  class="hover:text-accent transition-colors">Hizmet Bölgeleri</a></li>
+          <li><a href="#iletisim"  class="hover:text-accent transition-colors">İletişim</a></li>
+        </ul>
+      </div>
+
+      <!-- Sütun 3: İletişim — NAP (schema uyumlu) -->
+      <div>
+        <h4 class="text-white font-bold text-sm uppercase tracking-widest mb-4">
+          İletişim Bilgileri
+        </h4>
+        <!-- NAP: Name/Address/Phone — schema ile eşleşmeli -->
+        <address class="not-italic text-sm space-y-3">
+          <div class="flex items-start gap-2.5">
+            <svg class="w-4 h-4 text-accent mt-0.5 flex-shrink-0"
+                 fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95
+                   -4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                   clip-rule="evenodd"/>
+            </svg>
+            <span>Ümraniye, İstanbul</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-accent flex-shrink-0"
+                 fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0
+                       01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774
+                       -1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1
+                       1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            <a href="tel:+905324848374"
+               class="hover:text-accent transition-colors">
+              0(532) 484 83 74
+            </a>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-accent flex-shrink-0"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2
+                       2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2
+                       2 0 002 2z"/>
+            </svg>
+            <a href="mailto:gokhan@erenefeteknik.com"
+               class="hover:text-accent transition-colors">
+              gokhan@erenefeteknik.com
+            </a>
+          </div>
+          <!-- WhatsApp footer link -->
+          <div class="flex items-center gap-2.5">
+            <svg class="w-4 h-4 text-[#25D366] flex-shrink-0"
+                 viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099
+                       -.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199
+                       -.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883
+                       -.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606
+                       .134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099
+                       -.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207
+                       -.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01
+                       -.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479
+                       0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077
+                       4.487.709.306 1.262.489 1.694.625.712.227 1.36.195
+                       1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248
+                       -1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533
+                       5.857L.057 23.5l5.79-1.452A11.955 11.955 0 0012 24c6.627
+                       0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0
+                       01-5.015-1.378l-.36-.214-3.732.935.999-3.61-.234-.371A9.818
+                       9.818 0 1112 21.818z"/>
+            </svg>
+            <a href="https://wa.me/905324848374"
+               target="_blank" rel="noopener noreferrer"
+               class="hover:text-[#25D366] transition-colors">
+              WhatsApp Destek Hattı
+            </a>
+          </div>
+        </address>
+      </div>
+
+    </div>
+
+    <!-- Alt bar -->
+    <div class="border-t border-white/10 pt-6 text-center text-xs text-gray-500">
+      © 2025 Eren Efe Teknik Servis. Tüm hakları saklıdır. · Ümraniye, İstanbul
+    </div>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════════════════════
+     9. STICKY WhatsApp BUTONU (fixed, sağ alt)
+════════════════════════════════════════════════════════════════ -->
+<a href="https://wa.me/905324848374?text=Merhaba%2C%20teknik%20servis%20talep%20etmek%20istiyorum."
+   target="_blank" rel="noopener noreferrer"
+   aria-label="WhatsApp Destek Hattı"
+   class="wa-pulse fixed bottom-6 right-6 z-50
+          bg-[#25D366] hover:bg-[#1ebe5d]
+          w-14 h-14 rounded-full shadow-2xl
+          flex items-center justify-center
+          transition-colors duration-150">
+  <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148
+             -.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297
+             -.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173
+             -.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298
+             .298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207
+             -.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074
+             -.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213
+             3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712
+             .227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248
+             -1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L.057 23.5
+             l5.79-1.452A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0
+             12 0zm0 21.818a9.818 9.818 0 01-5.015-1.378l-.36-.214-3.732.935.999
+             -3.61-.234-.371A9.818 9.818 0 1112 21.818z"/>
+  </svg>
+</a>
+
+</body>
+</html>

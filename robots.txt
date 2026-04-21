@@ -1,0 +1,5 @@
+User-agent: *
+Crawl-delay: 10
+Sitemap: https://erenefeteknik.com/sitemap.xml
+Disallow: /admin/
+Disallow: /private/
