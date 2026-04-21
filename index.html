@@ -3,38 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ═══ SEO CORE ═══ -->
+  
+  <!-- TEK TİP SEO -->
   <title>Eren Efe Teknik | Ümraniye Beyaz Eşya Teknik Servisi</title>
-  <!-- SEO DÜZELTMELERİ -->
-<meta name="description" content="Eren Efe Teknik - Profesyonel tesisat ve teknik hizmet çözümleri. Hızlı servis, güvenilir ekip.">
-<meta name="keywords" content="tesisatçı, teknik servis, acil tesisat, Eren Efe Teknik">
-<meta property="og:title" content="Eren Efe Teknik | Profesyonel Hizmetler">
-<meta property="og:description" content="Profesyonel teknik servis çözümleri için hemen iletişime geçin.">
-<meta property="og:image" content="https://erenefeteknik.com/assets/logo.png">
-<link rel="canonical" href="https://erenefeteknik.com/">
-<meta name="robots" content="index, follow">
+  <meta name="description" content="Ümraniye ve İstanbul Anadolu Yakası'nda 7/24 Beyaz Eşya, Klima ve Kombi Teknik Servisi. Hızlı servis, garantili onarım.">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.erenefeteknik.com/" />
 
-  <!-- ═══ OPEN GRAPH ═══ -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:locale"      content="tr_TR" />
-  <meta property="og:title"       content="Eren Efe Teknik | Ümraniye Beyaz Eşya Servisi" />
-  <meta property="og:description" content="Aynı gün servis, garantili onarım. Ümraniye ve çevresinde 7/24 teknik destek." />
-  <meta property="og:url"         content="https://www.erenefeteknik.com/" />
+  <!-- OPEN GRAPH (Tekil) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta property="og:title" content="Eren Efe Teknik | Ümraniye Beyaz Eşya Servisi" />
+  <meta property="og:description" content="Ümraniye ve çevresinde 7/24 teknik destek. Aynı gün servis, garantili onarım." />
+  <meta property="og:url" content="https://www.erenefeteknik.com/" />
+  <meta property="og:image" content="https://www.erenefeteknik.com/assets/logo.png" />
 
-  <!-- ═══ SCHEMA.ORG — LocalBusiness ═══ -->
+  <!-- SCHEMA (URL DÜZELTİLDİ) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "Eren Efe Teknik Servis",
-    "description": "Ümraniye ve İstanbul Anadolu Yakası'nda beyaz eşya, klima ve kombi teknik servisi.",
-    "url": "https://www.erenefeteknik.com.tr",
-    "telephone": "+90-532-484-83-74",
+    "url": "https://www.erenefeteknik.com", 
+    "telephone": "+905324848374",
     "email": "gokhan@erenefeteknik.com",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Örnek Cad. No:1",
       "addressLocality": "Ümraniye",
       "addressRegion": "İstanbul",
       "postalCode": "34760",
@@ -47,81 +42,25 @@
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       "opens": "00:00",
       "closes": "23:59"
     },
-    "areaServed": [
-      "Ümraniye","Atakent","Çakmak","Ihlamurkuyu","Site Mahallesi",
-      "Atatürk Mahallesi","Kadıköy","Üsküdar","Ataşehir","Maltepe","Kartal","Pendik"
-    ],
+    "areaServed": ["Ümraniye", "Atakent", "Çakmak", "Ihlamurkuyu", "Site Mahallesi", "Atatürk Mahallesi", "Kadıköy", "Üsküdar", "Ataşehir", "Maltepe", "Kartal", "Pendik"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Teknik Servis Hizmetleri",
       "itemListElement": [
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Buzdolabı Tamiri"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Çamaşır Makinesi Tamiri"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Bulaşık Makinesi Tamiri"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Klima Servisi"}},
-        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Kombi Servisi"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Buzdolabı Tamiri"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Çamaşır Makinesi Tamiri"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bulaşık Makinesi Tamiri"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Klima Servisi"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Kombi Servisi"}}
       ]
     }
   }
   </script>
-
-  <!-- ═══ TAILWIND CDN ═══ -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary:  '#1B4F72',  /* Deep Kurumsal Mavi  */
-            accent:   '#E67E22',  /* Enerji Turuncusu    */
-            pdark:    '#154060',  /* primary hover       */
-            adark:    '#CA6F1E',  /* accent hover        */
-            surface:  '#F4F6F8',
-          },
-          fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
-        }
-      }
-    }
-  </script>
-
-  <!-- ═══ GOOGLE FONTS ═══ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
-
-  <style>
-    html { scroll-behavior: smooth; }
-
-    /* CTA pulse — telefon & WhatsApp butonları */
-    @keyframes wa-pulse {
-      0%   { box-shadow: 0 0 0 0   rgba(37,211,102,.55); }
-      70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0);  }
-      100% { box-shadow: 0 0 0 0   rgba(37,211,102,0);   }
-    }
-    .wa-pulse { animation: wa-pulse 2.2s infinite; }
-
-    @keyframes tel-pulse {
-      0%   { box-shadow: 0 0 0 0   rgba(230,126,34,.6); }
-      70%  { box-shadow: 0 0 0 14px rgba(230,126,34,0); }
-      100% { box-shadow: 0 0 0 0   rgba(230,126,34,0);  }
-    }
-    .tel-pulse { animation: tel-pulse 2.2s infinite; }
-
-    /* Marka bandı kayan animasyon */
-    @keyframes marquee {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .marquee-track { animation: marquee 22s linear infinite; }
-    .marquee-track:hover { animation-play-state: paused; }
-  </style>
 </head>
-
 <body class="font-sans text-gray-800 bg-white antialiased">
 
 <!-- ════════════════════════════════════════════════════════════════
